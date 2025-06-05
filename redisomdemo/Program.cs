@@ -7,7 +7,6 @@ namespace redisomdemo;
 public class PlayerEntity
 {
   [RedisIdField, Indexed] public string UniquePlayerId { get; set; }
-  public DateTime EnteredAt { get; set; }
 }
 
 [Document(StorageType = StorageType.Json, Prefixes = ["PlayerState"])]
@@ -40,21 +39,20 @@ internal class Program
     var players = provider.RedisCollection<PlayerEntity>();
     var playerStates = provider.RedisCollection<PlayerStateEntity>();
 
-    var uniquePlayerId = Guid.NewGuid().ToString();
-
     await players.InsertAsync(new PlayerEntity
     {
-      UniquePlayerId = uniquePlayerId,
-      EnteredAt = DateTime.UtcNow,
+      UniquePlayerId = Guid.NewGuid().ToString(),
     });
 
     var playerList = await players.ToListAsync();
 
     await playerStates.InsertAsync(new PlayerStateEntity
     {
-      UniquePlayerId = uniquePlayerId,
+      UniquePlayerId = Guid.NewGuid().ToString(),
     });
 
     var playerList2 = await players.ToListAsync();
+
+    Console.WriteLine(playerList2.Count); // Should be 1
   }
 }
