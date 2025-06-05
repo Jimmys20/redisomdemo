@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "redisomdemo", "redisomdemo\redisomdemo.csproj", "{D14F3277-D6AC-4732-B3E2-0B867EC310DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D14F3277-D6AC-4732-B3E2-0B867EC310DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14F3277-D6AC-4732-B3E2-0B867EC310DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14F3277-D6AC-4732-B3E2-0B867EC310DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14F3277-D6AC-4732-B3E2-0B867EC310DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FDE7202-1A13-496E-B0C9-FF3D5F2AC036}
+	EndGlobalSection
+EndGlobal
